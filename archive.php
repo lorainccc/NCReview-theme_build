@@ -29,7 +29,7 @@ $thecategory = single_cat_title( '', false );
 $args = array(
 	'post_type' => 'post',
 	'category_name'=> $thecategory,
-	'tag' => 'current-issue',
+	'issue' => 'current-issue',
 	);
 $query = new WP_Query( $args );
 while ( $query->have_posts() ) {

@@ -17,11 +17,7 @@
 					if (empty_content($post->post_content)) {
 							echo '<div class="small-12 columns medium-12 large-12 columns">';	
 							echo '<header class="entry-header">';
-						//Do something if a specific array value exists within a post
-							$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
-										foreach($term_list as $term_single) {
-										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
-									}
+									the_category();
 										the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 							echo '</header>';//closes .entry-header
 										the_excerpt('<p>','</p>'); 
@@ -48,11 +44,7 @@
 					<div class="small-12 columns medium-7 large-7 columns">
 							<header class="entry-header">
 										<?php 	
-												//Do something if a specific array value exists within a post
-							$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
-										foreach($term_list as $term_single) {
-										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
-									}
+						the_category();
 						the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 						</header><!-- .entry-header -->
 													<p><?php the_excerpt(); ?></p> 
@@ -66,13 +58,7 @@
 					</div>			
 					<div class="small-12 columns medium-7 large-7 columns">
 							<header class="entry-header">
-										<?php 	
-									//Do something if a specific array value exists within a post
-							$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
-										foreach($term_list as $term_single) {
-										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
-									}
-			the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+										<?php 	the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 						</header><!-- .entry-header -->
 													<p><?php the_excerpt(); ?></p> 
 					</div>
@@ -80,12 +66,8 @@
 		}else{
 			?>
 				<header class="entry-header">
-						<?php 
-									//Do something if a specific array value exists within a post
-							$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
-										foreach($term_list as $term_single) {
-										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
-									}
+						<?php 	
+			the_category();
 			the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 				</header><!-- .entry-header -->
 				<div class="small-12 medium-12 larg-12 columns">		
