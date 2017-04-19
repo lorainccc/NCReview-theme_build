@@ -1,0 +1,44 @@
+/*!
+Theme Name: NCReview-theme_build
+Theme URI:    http://www.lorainccc.edu 
+Author: LCCC Web Team 
+Author URI: http://www.lorainccc.edu 
+Description: Lorain County Community College Child Theme 
+Version:1.0.0
+Template: lccc-framework  
+License: GNU General Public License v2 or later 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+Text Domain:  NCReview-theme_build */ 
+ /*!
+Table of Contents
+Color Section : LCCC Color Scheme
+Mixin Section : LCCC Mixins
+Section 1: Foundation
+Section 2: Body
+Section 3: Header
+Section 4: Navigation
+Section 5: Footer
+Section 6: Text
+*//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides */.row{max-width:65.5rem}
+/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;background-color:#e0e0e0}
+.sidebarcontainer,.home-page-content,.fiction,.non-fiction,.art-photography,.news-and-notes,.poetry{background:rgba(254,254,254,0.8);margin-top:30px;padding:10px}
+.sidebarcontainer{background:rgba(254,254,254,0.9);padding:10px}.right-postimage{border-left:1px solid #CCC}
+.right-postimage img{margin-top:20px;margin-bottom:20px}.left-postimage{border-right:1px solid #CCC}
+.left-postimage img{margin-top:20px;margin-bottom:20px}ul.post-categories{list-style:none;margin-left:0;margin-bottom:0}
+ul.post-categories li a{font-size:1.6rem;text-decoration:underline}.mini-photogallery li a img{width:100%}
+.mini-photogallery li{padding-bottom:0}.current-issue-post{background:#fefefe;margin-bottom:10px;padding:10px;border:1px inset #000}
+.page-header{background:rgba(254,254,254,0.8);margin-bottom:15px;padding:10px;margin-top:30px}
+article{background:rgba(254,254,254,0.8);padding:10px}.entry-footer{background:0}/* Small only */
+@media screen and (max-width: 39.9375em) {div.contentdiv{padding-top: 1rem;}}
+@media only screen and (min-width:40em){.main{min-height:566px}.page-content,.post-content,.category-content,.sidebarcontainer{margin-top:30px}
+}div.see-more-link{padding: 1rem 0;text-align: center;}div.column.column-block{padding-top: 0.9rem;}/*! Section 3 - Header */.skip-link{display:none}.mobile-nav-bar{background: #333;padding: 0.5rem 0 0.6rem 0;}.menu-centered{background: #000;padding-top: 0.3rem;}/*! Section 4 - Navigation Styles  */.menu>li>a{color: #fff;}nav{    background: #333;}.contain-to-grid{background:0}
+.contain-to-grid .top-bar{border-left:2px solid #333;border-right:2px solid #333}
+footer{background:#333}.footerrow{padding-top:0;padding-bottom:0;background:#333;color:#fff;margin-top:20px}
+.footer-copyright p{text-align:left;vertical-align:middle;margin-bottom:0;margin-top:20px}
+a:hover,a:focus{color:#343b99}h3.author-title{font-style:italic}h2.entry-title a{color:#000;text-decoration:underline}
+h2.entry-title-tag a{color:#000;text-decoration:none}h3.entry-title a{color:#000}
+h2.entry-title a:hover{color:#008cba}h2.current-issue-tag a{color:#777;text-decoration:underline}
+h3 a,h3 a:hover{color:#000}h1.widget-title{font-size:1.75rem}.sidebarcontainer a.wpp-post-title{font-size:1.3rem;text-decoration:underline}
+.sidebarcontainer .post-stats{display:block;font-size:15px;font-weight:bold}
+/*!Section 6: Text */
+h1{font-size: 2.2rem;}h1,h2{font-weight: 700;}h2{ font-size: 2.0rem;}
