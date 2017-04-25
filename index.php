@@ -13,7 +13,7 @@
  */
 get_header(); ?>
 <div class="small-12 medium-12 large-12 columns contentdiv">
-	<div class="small-12 medium-8 large-8 columns nopadding content-container">
+	<div class="small-12 medium-8 large-8 columns content-container">
 					<div id="primary" class="content-area">
 								<main id="main" class="site-main" role="main">
 									<!-- Home Page Code Starts here -->

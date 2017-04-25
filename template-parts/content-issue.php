@@ -17,8 +17,16 @@
 					if (empty_content($post->post_content)) {
 							echo '<div class="small-12 columns medium-12 large-12 columns">';	
 							echo '<header class="entry-header">';
-									the_category();
+								$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
+										foreach($term_list as $term_single) {
+										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
+									}
 										the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+							$value = get_field( "author" );
+							if( $value ) { 
+    					echo '<h5 class="author-byline">By '.$value.'</h5>';
+							} else {
+							}		
 							echo '</header>';//closes .entry-header
 										the_excerpt('<p>','</p>'); 
 								echo '</div>';
@@ -44,8 +52,17 @@
 					<div class="small-12 columns medium-7 large-7 columns">
 							<header class="entry-header">
 										<?php 	
-						the_category();
-						the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+	$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
+										foreach($term_list as $term_single) {
+										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
+									}
+						the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); 
+						$value = get_field( "author" );
+							if( $value ) { 
+    					echo '<h5 class="author-byline">By '.$value.'</h5>';
+							} else {
+							}				
+								?>
 						</header><!-- .entry-header -->
 													<p><?php the_excerpt(); ?></p> 
 					</div>
@@ -67,8 +84,17 @@
 			?>
 				<header class="entry-header">
 						<?php 	
-			the_category();
-			the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+			$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
+										foreach($term_list as $term_single) {
+										echo '<a href="/issue/'.$term_single->slug.'"><h4>'.$term_single->name.'</h4></a>'; //do something here
+									}
+			the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); 
+				$value = get_field( "author" );
+							if( $value ) { 
+    					echo '<h5 class="author-byline">By '.$value.'</h5>';
+							} else {
+							}		
+					?>
 				</header><!-- .entry-header -->
 				<div class="small-12 medium-12 larg-12 columns">		
 						<?php	

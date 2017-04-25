@@ -20,8 +20,7 @@ Section 4: Navigation
 Section 5: Footer
 Section 6: Text
 *//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides */.row{max-width:65.5rem}
-/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;background-color:#e0e0e0}
-.sidebarcontainer,.home-page-content,.fiction,.non-fiction,.art-photography,.news-and-notes,.poetry{background:rgba(254,254,254,0.8);margin-top:30px;padding:10px}
+/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;}div.issue-entries{margin-bottom: 1.5rem;padding: 0;}.nopadding{padding: 0;}div.nav-links{padding: 0 1rem 0.5rem 1rem;margin-top: -1rem;}.sidebarcontainer,.home-page-content,.fiction,.non-fiction,.art-photography,.news-and-notes,.poetry{background:rgba(254,254,254,0.8);margin-top:30px;padding:10px}
 .sidebarcontainer{background:rgba(254,254,254,0.9);padding:10px}.right-postimage{border-left:1px solid #CCC}
 .right-postimage img{margin-top:20px;margin-bottom:20px}.left-postimage{border-right:1px solid #CCC}
 .left-postimage img{margin-top:20px;margin-bottom:20px}ul.post-categories{list-style:none;margin-left:0;margin-bottom:0}
@@ -35,10 +34,9 @@ article{background:rgba(254,254,254,0.8);padding:10px}.entry-footer{background:0
 .contain-to-grid .top-bar{border-left:2px solid #333;border-right:2px solid #333}
 footer{background:#333}.footerrow{padding-top:0;padding-bottom:0;background:#333;color:#fff;margin-top:20px}
 .footer-copyright p{text-align:left;vertical-align:middle;margin-bottom:0;margin-top:20px}
+/*!Section 6: Text */
 a:hover,a:focus{color:#343b99}h3.author-title{font-style:italic}h2.entry-title a{color:#000;text-decoration:underline}
 h2.entry-title-tag a{color:#000;text-decoration:none}h3.entry-title a{color:#000}
-h2.entry-title a:hover{color:#008cba}h2.current-issue-tag a{color:#777;text-decoration:underline}
+h2.entry-title a:hover{color:#008cba}header.entry-header a h2.current-issue-tag, h2.current-issue-tag a{color:#777;text-decoration:underline} 
 h3 a,h3 a:hover{color:#000}h1.widget-title{font-size:1.75rem}.sidebarcontainer a.wpp-post-title{font-size:1.3rem;text-decoration:underline}
-.sidebarcontainer .post-stats{display:block;font-size:15px;font-weight:bold}
-/*!Section 6: Text */
-h1{font-size: 2.2rem;}h1,h2{font-weight: 700;}h2{ font-size: 2.0rem;}
+.sidebarcontainer .post-stats{display:block;font-size:15px;font-weight:bold}h1{font-size: 2.2rem;}h1,h2{font-weight: 700;}h2{ font-size: 2.0rem;}h5.author-byline{font-size: 1.1rem;padding-left: 0.25rem;margin-top: -0.55rem;font-style: italic;}h2.screen-reader-text{color: #fff;padding: 1rem;font-size: 1.5rem;}

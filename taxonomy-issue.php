@@ -9,7 +9,7 @@
 
 get_header(); ?>
 <div class="small-12 medium-12 large-12 columns contentdiv">
-	<div class="small-12 medium-8 large-8 columns nopadding">
+	<div class="small-12 medium-8 large-8 columns">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -25,7 +25,7 @@ get_header(); ?>
 <?php 	endif; ?>
 			<?php	
 			if ( have_posts() ) : 
-			
+			echo '<div class="small-12 columns issue-entries">';
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -36,10 +36,12 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', 'issue' );
 
+			
 			endwhile;
-
+echo '</div>';
+echo '<div class="small-12 columns nopadding">';
 			the_posts_navigation();
-
+echo '</div>';
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
