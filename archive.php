@@ -37,7 +37,12 @@ while ( $query->have_posts() ) {
 ?>	
 			<div class="small-12 medium-12 large-12 columns current-issue-post">
 							<header class="entry-header">
-										<h2 class="current-issue-tag"><?php the_tags('','',''); ?></h2>
+										<?php 
+								$term_list = wp_get_post_terms($post->ID, 'issue', array("fields" => "all"));
+										foreach($term_list as $term_single) {
+										echo '<a href="/issue/'.$term_single->slug.'"><h2 class="current-issue-tag">'.$term_single->name.'</h2></a>'; //do something here
+									}
+										?>
 										
 							</header><!-- .entry-header -->
 						<div class="entry-content">
@@ -165,7 +170,13 @@ if ( $nonciquery->have_posts() ) {
 	}
 	echo '</div>';
 	echo '<div class="small-12 columns nopadding">';
-		the_posts_navigation();
+		?>
+			<div id="pagination" class="clearfix">
+  <div style="float:left;"><?php previous_posts_link( 'Previous Posts' ); ?></div>
+  <div style="float:right;"><?php next_posts_link( 'More Posts', $wp_query->max_num_pages ); ?></div>
+			</div>
+			
+			<?php
 	echo '</div>';	
 	/* Restore original Post Data */
 	wp_reset_postdata();
